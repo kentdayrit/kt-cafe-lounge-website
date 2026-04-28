@@ -14,10 +14,10 @@
                 extend: {
                     colors: {
                         brand: {
-                            green: "#2D5A27",  /* Forest Green */
-                            orange: "#E67E22", /* Warm Orange */
-                            yellow: "#F1C40F", /* Bright Yellow */
-                            cream: "#FCF9F2",  /* Soft Off-white background */
+                            green: "#2D5A27",
+                            orange: "#E67E22",
+                            yellow: "#F1C40F",
+                            cream: "#FCF9F2",
                         }
                     },
                     fontFamily: {
@@ -32,6 +32,7 @@
         body { background-color: #FCF9F2; color: #2D5A27; }
         .nav-blur { background: rgba(252, 249, 242, 0.9); backdrop-filter: blur(8px); }
         .menu-dot { border-bottom: 2px dotted #E67E22; flex-grow: 1; margin: 0 10px; opacity: 0.3; }
+        .promo-card { background: linear-gradient(135deg, #2D5A27 0%, #1a3617 100%); }
     </style>
 </head>
 <body class="font-sans antialiased">
@@ -41,143 +42,145 @@
         <div class="hidden md:flex space-x-8 text-brand-green text-xs uppercase tracking-widest font-semibold">
             <a href="#about" class="hover:text-brand-orange transition">About</a>
             <a href="#menu" class="hover:text-brand-orange transition">Menu</a>
+            <a href="#promos" class="hover:text-brand-orange transition">Specials</a>
             <a href="#location" class="hover:text-brand-orange transition">Location</a>
             <a href="#contact" class="bg-brand-orange text-white px-5 py-2 rounded-full hover:bg-brand-green transition shadow-lg">Inquiry</a>
         </div>
     </nav>
 
-    <header class="relative h-[90vh] flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-brand-green/20 z-10"></div>
-        <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=1961" 
-             class="absolute inset-0 w-full h-full object-cover" alt="Fresh Coffee Beans">
-        
+    <header class="relative h-[85vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-black/40 z-10"></div>
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1974" class="absolute inset-0 w-full h-full object-cover" alt="Artisan Coffee">
         <div class="relative z-20 text-center px-4">
-            <span class="bg-brand-yellow text-brand-green px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block shadow-md">Freshly Brewed in Pampanga</span>
-            <h2 class="text-6xl md:text-8xl font-serif mb-4 leading-tight text-white drop-shadow-2xl">KT Cafe Lounge</h2>
-            <p class="text-white uppercase tracking-[0.4em] text-sm mb-10 font-medium opacity-90">Great Mall • Mabalacat City</p>
-            <a href="#menu" class="bg-brand-orange text-white px-12 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-all shadow-xl">
-                View Menu
-            </a>
+            <span class="bg-brand-yellow text-brand-green px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block">Mabalacat's Premium Lounge</span>
+            <h2 class="text-5xl md:text-8xl font-serif mb-4 text-white italic">KT Cafe Lounge</h2>
+            <p class="text-white uppercase tracking-[0.4em] text-sm mb-10 font-medium">Great Mall • Pampanga</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#menu" class="bg-brand-orange text-white px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition shadow-xl">View Menu</a>
+                <a href="#location" class="bg-white text-brand-green px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-brand-yellow transition shadow-xl">Find Us</a>
+            </div>
         </div>
     </header>
 
-    <section id="about" class="py-24 px-6 max-w-4xl mx-auto text-center">
-        <div class="inline-block p-3 rounded-full bg-brand-yellow/20 mb-6">
-            <i data-lucide="leaf" class="text-brand-green w-8 h-8"></i>
+    <section id="about" class="py-24 px-6 max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+            <h3 class="text-brand-orange uppercase tracking-widest text-xs font-bold mb-4">The Atmosphere</h3>
+            <h2 class="text-4xl font-serif italic text-brand-green mb-6">Designed for Comfort. Brewed for Excellence.</h2>
+            <p class="text-gray-600 leading-relaxed mb-6">
+                KT Cafe Lounge was born from a love for specialty coffee and the need for a sophisticated social space in Mabalacat. Whether you're here for a business meeting or a quiet afternoon with a book, our sun-drenched lounge at the Great Mall provides the perfect backdrop.
+            </p>
+            <div class="flex gap-6">
+                <div class="text-center">
+                    <p class="text-brand-orange font-serif text-2xl">100%</p>
+                    <p class="text-[10px] uppercase text-gray-500 font-bold tracking-widest">Arabica</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-brand-orange font-serif text-2xl">Fresh</p>
+                    <p class="text-[10px] uppercase text-gray-500 font-bold tracking-widest">Bakes</p>
+                </div>
+            </div>
         </div>
-        <h3 class="text-brand-orange uppercase tracking-widest text-xs font-bold mb-4">The Organic Vibe</h3>
-        <p class="text-3xl md:text-5xl font-serif leading-tight italic mb-8 text-brand-green">
-            "Sip the sunshine, taste the freshness."
-        </p>
-        <p class="text-gray-600 max-w-2xl mx-auto leading-relaxed text-lg">
-            KT Cafe Lounge brings a burst of energy to the Great Mall. Our theme reflects our commitment to natural ingredients, vibrant flavors, and a warm, sun-drenched atmosphere for the Mabalacat community.
-        </p>
     </section>
 
-    <section id="menu" class="py-24 bg-white px-6 rounded-3xl mx-4 shadow-sm border border-brand-yellow/20">
+    <section id="menu" class="py-24 bg-white px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-serif italic text-brand-green">Signature Items</h2>
+                <p class="text-brand-orange font-medium mt-2">A taste of what we offer</p>
+            </div>
+            <div class="space-y-6">
+                <div class="flex items-baseline group">
+                    <h4 class="text-lg font-bold text-brand-green group-hover:text-brand-orange transition">Spanish Latte</h4>
+                    <div class="menu-dot"></div>
+                    <span class="text-brand-orange font-bold font-sans">₱185</span>
+                </div>
+                <div class="flex items-baseline group">
+                    <h4 class="text-lg font-bold text-brand-green group-hover:text-brand-orange transition">Seafood Marinara</h4>
+                    <div class="menu-dot"></div>
+                    <span class="text-brand-orange font-bold font-sans">₱420</span>
+                </div>
+                <div class="flex items-baseline group">
+                    <h4 class="text-lg font-bold text-brand-green group-hover:text-brand-orange transition">Truffle Mushroom Pasta</h4>
+                    <div class="menu-dot"></div>
+                    <span class="text-brand-orange font-bold font-sans">₱380</span>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <a href="menu.html" class="border-2 border-brand-green text-brand-green px-8 py-3 rounded-full font-bold uppercase tracking-widest hover:bg-brand-green hover:text-white transition">Full Digital Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="promos" class="py-24 px-6 bg-brand-cream">
         <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-20">
-                <h2 class="text-5xl font-serif italic text-brand-green">Our Favorites</h2>
-                <div class="w-24 h-1 bg-brand-yellow mx-auto mt-4 rounded-full"></div>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-x-20 gap-y-12">
-                <div class="space-y-8">
-                    <h3 class="text-2xl font-serif italic text-brand-orange flex items-center gap-3">
-                        <i data-lucide="coffee"></i> The Brews
-                    </h3>
-                    <div class="space-y-6">
-                        <div class="flex items-baseline group">
-                            <h4 class="text-lg font-bold text-brand-green">Spanish Latte</h4>
-                            <div class="menu-dot"></div>
-                            <span class="text-brand-orange font-bold font-sans">₱185</span>
-                        </div>
-                        <p class="text-sm text-gray-500 -mt-4 italic">Rich espresso with creamy condensed milk.</p>
-
-                        <div class="flex items-baseline group">
-                            <h4 class="text-lg font-bold text-brand-green">Orange Cold Brew</h4>
-                            <div class="menu-dot"></div>
-                            <span class="text-brand-orange font-bold font-sans">₱195</span>
-                        </div>
-                        <p class="text-sm text-gray-500 -mt-4 italic">Cold brew coffee with a splash of fresh citrus juice.</p>
-                    </div>
+            <div class="promo-card rounded-3xl p-10 md:p-20 text-center text-white relative overflow-hidden shadow-2xl">
+                <div class="absolute top-0 right-0 p-8 opacity-10">
+                    <i data-lucide="sparkles" class="w-40 h-40"></i>
                 </div>
-
-                <div class="space-y-8">
-                    <h3 class="text-2xl font-serif italic text-brand-orange flex items-center gap-3">
-                        <i data-lucide="sandwich"></i> Light Bites
-                    </h3>
-                    <div class="space-y-6">
-                        <div class="flex items-baseline group">
-                            <h4 class="text-lg font-bold text-brand-green">Truffle Pasta</h4>
-                            <div class="menu-dot"></div>
-                            <span class="text-brand-orange font-bold font-sans">₱380</span>
-                        </div>
-                        <p class="text-sm text-gray-500 -mt-4 italic">Linguine in creamy mushroom sauce.</p>
-
-                        <div class="flex items-baseline group">
-                            <h4 class="text-lg font-bold text-brand-green">Honey Lemon Cake</h4>
-                            <div class="menu-dot"></div>
-                            <span class="text-brand-orange font-bold font-sans">₱150</span>
-                        </div>
-                        <p class="text-sm text-gray-500 -mt-4 italic">Sweet, zesty sponge cake with citrus glaze.</p>
-                    </div>
-                </div>
+                <h2 class="text-4xl md:text-6xl font-serif italic mb-6">Sunset Happy Hour</h2>
+                <p class="text-brand-yellow text-xl mb-8 font-light max-w-xl mx-auto">Get 20% OFF all pastries every weekday from 5:00 PM to 7:00 PM. Perfect for your evening commute!</p>
+                <a href="#location" class="inline-block bg-brand-yellow text-brand-green px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition">Claim Offer</a>
             </div>
         </div>
     </section>
 
-<section id="location" class="py-32 px-6 max-w-6xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-16 items-center">
-            <div class="space-y-8">
-                <h3 class="text-4xl font-serif italic text-brand-green">Visit Us at <span class="text-brand-orange">Great Mall</span></h3>
-                <div class="space-y-6">
-                    <div class="flex items-center gap-4 bg-brand-yellow/10 p-4 rounded-xl">
-                        <i data-lucide="map-pin" class="text-brand-orange"></i>
-                        <p class="text-brand-green font-medium">201, Great Mall, Mabalacat City, Pampanga</p>
-                    </div>
-                    <div class="flex items-center gap-4 bg-brand-green/5 p-4 rounded-xl">
-                        <i data-lucide="clock" class="text-brand-green"></i>
-                        <div class="text-brand-green font-medium">
-                            <p>Mon - Thu: 10:00 AM – 11:00 PM</p>
-                            <p>Fri - Sun: 11:00 AM – 12:00 AM</p>
-                        </div>
-                    </div>
-                </div>
+    <section class="py-24 px-6 max-w-6xl mx-auto">
+        <h3 class="text-center text-brand-orange uppercase tracking-widest text-xs font-bold mb-12">Lounge Stories</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-2xl shadow-sm italic text-gray-600 border-t-4 border-brand-yellow">
+                "The best Spanish Latte in Pampanga! The vibe is so relaxing."
+                <p class="mt-4 font-bold text-brand-green not-italic">— Maria S.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm italic text-gray-600 border-t-4 border-brand-orange">
+                "Great spot for meetings at the Great Mall. Very professional atmosphere."
+                <p class="mt-4 font-bold text-brand-green not-italic">— John D.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm italic text-gray-600 border-t-4 border-brand-green">
+                "Love the pasta! Finally a high-end lounge in Mabalacat City."
+                <p class="mt-4 font-bold text-brand-green not-italic">— Elena R.</p>
+            </div>
+        </div>
+    </section>
 
-                <div class="w-full h-80 rounded-3xl overflow-hidden shadow-lg border-4 border-white">
-                    <iframe 
-                        width="100%" 
-                        height="100%" 
-                        frameborder="0" 
-                        scrolling="no" 
-                        marginheight="0" 
-                        marginwidth="0" 
-                        src="https://maps.google.com/maps?q=KT%20CAFE%20LOUNGE,%20Great%20Mall,%20Mabalacat&t=&z=15&ie=UTF8&iwloc=&output=embed">
-                    </iframe>
+    <section id="location" class="py-24 px-6 max-w-6xl mx-auto border-t border-brand-green/10">
+        <div class="grid md:grid-cols-2 gap-16 items-start">
+            <div>
+                <h3 class="text-4xl font-serif italic text-brand-green mb-8">Visit Us</h3>
+                <div class="w-full h-[450px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white mb-8">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3851.350625345678!2d120.579123!3d15.221567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396f777!2sGreat%20Mall!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="flex gap-4 items-center text-brand-green font-medium italic">
+                    <i data-lucide="map-pin"></i> 201, Great Mall, Mabalacat City
                 </div>
             </div>
 
-            <div id="contact" class="bg-white p-10 rounded-3xl shadow-xl border border-brand-yellow/20">
-                <h4 class="text-2xl font-serif mb-6 text-brand-green italic">Drop a Message</h4>
+            <div id="contact" class="bg-white p-10 rounded-[2rem] shadow-xl border border-brand-yellow/30">
+                <h4 class="text-3xl font-serif mb-6 text-brand-green italic">Inquiry</h4>
                 <form class="space-y-4">
-                    <input type="text" placeholder="Your Name" class="w-full bg-brand-cream border border-brand-green/10 rounded-lg p-3 focus:border-brand-orange outline-none transition-colors">
-                    <input type="email" placeholder="Your Email" class="w-full bg-brand-cream border border-brand-green/10 rounded-lg p-3 focus:border-brand-orange outline-none transition-colors">
-                    <textarea placeholder="How can we help?" rows="3" class="w-full bg-brand-cream border border-brand-green/10 rounded-lg p-3 focus:border-brand-orange outline-none transition-colors"></textarea>
-                    <button type="button" class="w-full bg-brand-green text-white py-4 rounded-lg font-bold uppercase tracking-widest hover:bg-brand-orange transition-all shadow-md">
-                        Send to KT Cafe
-                    </button>
+                    <input type="text" placeholder="Full Name" class="w-full bg-brand-cream border-none rounded-xl p-4 focus:ring-2 focus:ring-brand-orange outline-none transition">
+                    <input type="email" placeholder="Email Address" class="w-full bg-brand-cream border-none rounded-xl p-4 focus:ring-2 focus:ring-brand-orange outline-none transition">
+                    <textarea placeholder="How can we make your visit special?" rows="4" class="w-full bg-brand-cream border-none rounded-xl p-4 focus:ring-2 focus:ring-brand-orange outline-none transition"></textarea>
+                    <button class="w-full bg-brand-orange text-white py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-brand-green transition-all shadow-lg">Send Message</button>
                 </form>
+                <div class="mt-8 pt-8 border-t border-brand-green/5 text-center">
+                    <p class="text-xs text-gray-400 mb-4 uppercase tracking-[0.2em]">Join the Club</p>
+                    <div class="flex gap-2">
+                        <input type="email" placeholder="Email for updates" class="flex-grow bg-brand-cream rounded-l-full px-4 py-2 text-xs outline-none">
+                        <button class="bg-brand-green text-white px-4 py-2 rounded-r-full text-xs font-bold uppercase">Join</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <footer class="py-12 bg-brand-green text-brand-cream text-center rounded-t-[3rem]">
-        <div class="flex justify-center space-x-8 mb-8">
-            <i data-lucide="instagram" class="w-6 h-6 hover:text-brand-yellow cursor-pointer transition"></i>
-            <i data-lucide="facebook" class="w-6 h-6 hover:text-brand-yellow cursor-pointer transition"></i>
+
+    <footer class="py-12 bg-brand-green text-brand-cream text-center rounded-t-[4rem]">
+        <div class="flex justify-center space-x-8 mb-6">
+            <i data-lucide="instagram" class="w-6 h-6 hover:text-brand-yellow cursor-pointer"></i>
+            <i data-lucide="facebook" class="w-6 h-6 hover:text-brand-yellow cursor-pointer"></i>
+            <i data-lucide="mail" class="w-6 h-6 hover:text-brand-yellow cursor-pointer"></i>
         </div>
-        <p class="text-xs tracking-[0.4em] uppercase font-bold text-brand-yellow/80">KT CAFE LOUNGE • 2026</p>
-        <p class="text-[10px] mt-2 opacity-50">Mabalacat City, Pampanga</p>
+        <p class="text-[10px] tracking-[0.5em] uppercase font-bold text-brand-yellow/60">KT CAFE LOUNGE • Mabalacat City • 2026</p>
     </footer>
 
     <script>

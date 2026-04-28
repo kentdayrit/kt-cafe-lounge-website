@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu | KT CAFE LOUNGE</title>
+    <title>Digital Menu | KT CAFE LOUNGE</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -13,11 +13,11 @@
             theme: {
                 extend: {
                     colors: {
-                        lounge: {
-                            charcoal: "#121212",
-                            gold: "#D4AF37",
-                            cream: "#F5F5DC",
-                            accent: "#1c1c1c"
+                        brand: {
+                            green: "#2D5A27",
+                            orange: "#E67E22",
+                            yellow: "#F1C40F",
+                            cream: "#FCF9F2",
                         }
                     },
                     fontFamily: {
@@ -29,151 +29,141 @@
         }
     </script>
     <style>
-        body { background-color: #121212; color: #F5F5DC; }
-        .menu-border { border-image: linear-gradient(to bottom, #D4AF37, #121212) 1; }
+        body { background-color: #FCF9F2; color: #2D5A27; }
+        .menu-item:hover .price-tag { background-color: #E67E22; color: white; }
     </style>
 </head>
-<body class="font-sans antialiased">
+<body class="font-sans antialiased pb-20">
 
-    <nav class="p-8 flex justify-between items-center border-b border-lounge-gold/10">
-        <a href="index.html" class="text-lounge-gold flex items-center gap-2 hover:opacity-70 transition">
-            <i data-lucide="arrow-left" class="w-5 h-5"></i>
-            <span class="uppercase tracking-widest text-xs">Back to Home</span>
+    <nav class="p-6">
+        <a href="index.html" class="flex items-center text-brand-green font-bold uppercase tracking-widest text-xs hover:text-brand-orange transition">
+            <i data-lucide="chevron-left" class="mr-1"></i> Back to Home
         </a>
-        <h1 class="text-lounge-gold font-serif text-3xl italic font-bold">KT</h1>
-        <div class="w-24"></div> </nav>
+    </nav>
 
-    <header class="py-16 text-center">
-        <h2 class="text-5xl md:text-7xl font-serif italic mb-4">The Selection</h2>
-        <div class="w-24 h-px bg-lounge-gold mx-auto opacity-50"></div>
-        <p class="mt-6 text-lounge-gold/60 uppercase tracking-[0.4em] text-xs">Mabalacat City • Pampanga</p>
+    <header class="text-center py-10 px-6">
+        <div class="inline-block p-4 rounded-full bg-brand-yellow/20 mb-4">
+            <i data-lucide="book-open" class="text-brand-orange w-10 h-10"></i>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-serif italic text-brand-green">The Full Selection</h1>
+        <p class="text-brand-orange uppercase tracking-[0.3em] text-sm mt-4 font-semibold">KT Cafe Lounge • Great Mall</p>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 pb-24">
+    <main class="max-w-6xl mx-auto px-6">
         
-        <div class="grid md:grid-cols-2 gap-x-20 gap-y-16">
+        <div class="grid md:grid-cols-2 gap-12 mt-12">
             
-            <div>
-                <div class="flex items-center justify-between mb-10">
-                    <h3 class="text-3xl font-serif italic text-lounge-gold">Caffeinated</h3>
-                    <i data-lucide="coffee" class="text-lounge-gold opacity-50"></i>
+            <section class="bg-white p-8 rounded-[2rem] shadow-sm border border-brand-green/5">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-3xl font-serif italic text-brand-green">Coffee & Brews</h2>
+                    <i data-lucide="coffee" class="text-brand-yellow"></i>
                 </div>
                 
-                <div class="space-y-10">
-                    <div class="group">
-                        <div class="flex justify-between items-baseline border-b border-white/5 pb-1 group-hover:border-lounge-gold/40 transition">
-                            <h4 class="text-xl font-serif">Spanish Latte</h4>
-                            <span class="text-lounge-gold font-light">₱185</span>
+                <div class="space-y-8">
+                    <div class="menu-item flex justify-between items-start">
+                        <div>
+                            <h4 class="text-lg font-bold">Spanish Latte</h4>
+                            <p class="text-sm text-gray-500 italic">Signature espresso with silky condensed milk.</p>
                         </div>
-                        <p class="text-sm text-gray-500 mt-2 italic">Double espresso, condensed milk, silky steamed milk.</p>
+                        <span class="price-tag bg-brand-yellow/20 px-3 py-1 rounded-full text-brand-orange font-bold text-sm transition-colors">₱185</span>
                     </div>
 
-                    <div class="group">
-                        <div class="flex justify-between items-baseline border-b border-white/5 pb-1 group-hover:border-lounge-gold/40 transition">
-                            <h4 class="text-xl font-serif">Cloud Americano</h4>
-                            <span class="text-lounge-gold font-light">₱160</span>
+                    <div class="menu-item flex justify-between items-start">
+                        <div>
+                            <h4 class="text-lg font-bold">V60 Pour Over</h4>
+                            <p class="text-sm text-gray-500 italic">Single origin beans, hand-crafted brew.</p>
                         </div>
-                        <p class="text-sm text-gray-500 mt-2 italic">Iced black coffee topped with sea-salt cold foam.</p>
+                        <span class="price-tag bg-brand-yellow/20 px-3 py-1 rounded-full text-brand-orange font-bold text-sm transition-colors">₱210</span>
                     </div>
 
-                    <div class="group">
-                        <div class="flex justify-between items-baseline border-b border-white/5 pb-1 group-hover:border-lounge-gold/40 transition">
-                            <h4 class="text-xl font-serif">Dirty Matcha</h4>
-                            <span class="text-lounge-gold font-light">₱195</span>
+                    <div class="menu-item flex justify-between items-start">
+                        <div>
+                            <h4 class="text-lg font-bold">Dirty Matcha</h4>
+                            <p class="text-sm text-gray-500 italic">Ceremonial matcha with a double ristretto shot.</p>
                         </div>
-                        <p class="text-sm text-gray-500 mt-2 italic">Ceremonial matcha whisked with a shot of espresso.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="flex items-center justify-between mb-10">
-                    <h3 class="text-3xl font-serif italic text-lounge-gold">Kitchen</h3>
-                    <i data-lucide="utensils" class="text-lounge-gold opacity-50"></i>
-                </div>
-                
-                <div class="space-y-10">
-                    <div class="group">
-                        <div class="flex justify-between items-baseline border-b border-white/5 pb-1 group-hover:border-lounge-gold/40 transition">
-                            <h4 class="text-xl font-serif">Truffle Mushroom Pasta</h4>
-                            <span class="text-lounge-gold font-light">₱380</span>
-                        </div>
-                        <p class="text-sm text-gray-500 mt-2 italic">Linguine, wild mushrooms, white truffle oil, parmesan.</p>
-                    </div>
-
-                    <div class="group">
-                        <div class="flex justify-between items-baseline border-b border-white/5 pb-1 group-hover:border-lounge-gold/40 transition">
-                            <h4 class="text-xl font-serif">Lounge Grilled Cheese</h4>
-                            <span class="text-lounge-gold font-light">₱290</span>
-                        </div>
-                        <p class="text-sm text-gray-500 mt-2 italic">Three-cheese blend on sourdough with tomato bisque dip.</p>
-                    </div>
-
-                    <div class="group">
-                        <div class="flex justify-between items-baseline border-b border-white/5 pb-1 group-hover:border-lounge-gold/40 transition">
-                            <h4 class="text-xl font-serif">Seafood Marinara</h4>
-                            <span class="text-lounge-gold font-light">₱420</span>
-                        </div>
-                        <p class="text-sm text-gray-500 mt-2 italic">Fresh shrimp and mussels in a slow-simmered red sauce.</p>
+                        <span class="price-tag bg-brand-yellow/20 px-3 py-1 rounded-full text-brand-orange font-bold text-sm transition-colors">₱195</span>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div>
-                <div class="flex items-center justify-between mb-10">
-                    <h3 class="text-3xl font-serif italic text-lounge-gold">Refreshers</h3>
-                    <i data-lucide="glass-water" class="text-lounge-gold opacity-50"></i>
+            <section class="bg-white p-8 rounded-[2rem] shadow-sm border border-brand-green/5">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-3xl font-serif italic text-brand-green">Refreshers</h2>
+                    <i data-lucide="glass-water" class="text-brand-orange"></i>
                 </div>
                 
-                <div class="space-y-10">
-                    <div class="group">
-                        <div class="flex justify-between items-baseline border-b border-white/5 pb-1 group-hover:border-lounge-gold/40 transition">
-                            <h4 class="text-xl font-serif">Hibiscus Berry Tea</h4>
-                            <span class="text-lounge-gold font-light">₱155</span>
+                <div class="space-y-8">
+                    <div class="menu-item flex justify-between items-start">
+                        <div>
+                            <h4 class="text-lg font-bold">Yuzu Sparkling Soda</h4>
+                            <p class="text-sm text-gray-500 italic">Refreshing citrus with fresh mint.</p>
                         </div>
-                        <p class="text-sm text-gray-500 mt-2 italic">Cold-brewed hibiscus with muddled seasonal berries.</p>
+                        <span class="price-tag bg-brand-yellow/20 px-3 py-1 rounded-full text-brand-orange font-bold text-sm transition-colors">₱170</span>
                     </div>
 
-                    <div class="group">
-                        <div class="flex justify-between items-baseline border-b border-white/5 pb-1 group-hover:border-lounge-gold/40 transition">
-                            <h4 class="text-xl font-serif">Yuzu Sparkling Soda</h4>
-                            <span class="text-lounge-gold font-light">₱170</span>
+                    <div class="menu-item flex justify-between items-start">
+                        <div>
+                            <h4 class="text-lg font-bold">Hibiscus Iced Tea</h4>
+                            <p class="text-sm text-gray-500 italic">Floral, tart, and naturally sweet.</p>
                         </div>
-                        <p class="text-sm text-gray-500 mt-2 italic">Japanese citrus juice, sparkling water, fresh mint.</p>
+                        <span class="price-tag bg-brand-yellow/20 px-3 py-1 rounded-full text-brand-orange font-bold text-sm transition-colors">₱155</span>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div>
-                <div class="flex items-center justify-between mb-10">
-                    <h3 class="text-3xl font-serif italic text-lounge-gold">Bakery</h3>
-                    <i data-lucide="croissant" class="text-lounge-gold opacity-50"></i>
+            <section class="bg-white p-8 rounded-[2rem] shadow-sm border border-brand-green/5">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-3xl font-serif italic text-brand-green">Mains & Pasta</h2>
+                    <i data-lucide="utensils-cross-hairs" class="text-brand-green"></i>
                 </div>
                 
-                <div class="space-y-10">
-                    <div class="group">
-                        <div class="flex justify-between items-baseline border-b border-white/5 pb-1 group-hover:border-lounge-gold/40 transition">
-                            <h4 class="text-xl font-serif">Classic Croissant</h4>
-                            <span class="text-lounge-gold font-light">₱120</span>
+                <div class="space-y-8">
+                    <div class="menu-item flex justify-between items-start">
+                        <div>
+                            <h4 class="text-lg font-bold">Seafood Marinara</h4>
+                            <p class="text-sm text-gray-500 italic">Fresh shrimp and mussels in red reduction.</p>
                         </div>
-                        <p class="text-sm text-gray-500 mt-2 italic">Flaky, buttery layers baked fresh every morning.</p>
+                        <span class="price-tag bg-brand-yellow/20 px-3 py-1 rounded-full text-brand-orange font-bold text-sm transition-colors">₱420</span>
                     </div>
 
-                    <div class="group">
-                        <div class="flex justify-between items-baseline border-b border-white/5 pb-1 group-hover:border-lounge-gold/40 transition">
-                            <h4 class="text-xl font-serif">Dark Chocolate Tart</h4>
-                            <span class="text-lounge-gold font-light">₱210</span>
+                    <div class="menu-item flex justify-between items-start">
+                        <div>
+                            <h4 class="text-lg font-bold">Truffle Mushroom Pasta</h4>
+                            <p class="text-sm text-gray-500 italic">Creamy linguine with premium white truffle oil.</p>
                         </div>
-                        <p class="text-sm text-gray-500 mt-2 italic">70% dark cocoa ganache with a sea salt finish.</p>
+                        <span class="price-tag bg-brand-yellow/20 px-3 py-1 rounded-full text-brand-orange font-bold text-sm transition-colors">₱380</span>
                     </div>
                 </div>
-            </div>
+            </section>
 
+            <section class="bg-white p-8 rounded-[2rem] shadow-sm border border-brand-green/5">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-3xl font-serif italic text-brand-green">The Bakery</h2>
+                    <i data-lucide="croissant" class="text-brand-yellow"></i>
+                </div>
+                
+                <div class="space-y-8">
+                    <div class="menu-item flex justify-between items-start">
+                        <div>
+                            <h4 class="text-lg font-bold">Classic Croissant</h4>
+                            <p class="text-sm text-gray-500 italic">Hand-rolled, buttery, and baked fresh daily.</p>
+                        </div>
+                        <span class="price-tag bg-brand-yellow/20 px-3 py-1 rounded-full text-brand-orange font-bold text-sm transition-colors">₱120</span>
+                    </div>
+
+                    <div class="menu-item flex justify-between items-start">
+                        <div>
+                            <h4 class="text-lg font-bold">Dark Chocolate Tart</h4>
+                            <p class="text-sm text-gray-500 italic">70% cocoa ganache with sea salt flakes.</p>
+                        </div>
+                        <span class="price-tag bg-brand-yellow/20 px-3 py-1 rounded-full text-brand-orange font-bold text-sm transition-colors">₱210</span>
+                    </div>
+                </div>
+            </section>
         </div>
 
-        <div class="mt-24 pt-12 border-t border-lounge-gold/10 text-center text-gray-600 text-xs uppercase tracking-widest">
-            <p>Prices are inclusive of VAT. Service charge may apply.</p>
-            <p class="mt-2">Please inform our staff of any food allergies.</p>
+        <div class="mt-20 border-t border-brand-orange/20 pt-10 text-center">
+            <p class="text-[10px] uppercase tracking-[0.4em] text-brand-green/60 font-bold">Please inform our staff of any food allergies • Prices include VAT</p>
         </div>
     </main>
 
